@@ -39,13 +39,13 @@ fetchBreeds().then(data => {
 
 selector.addEventListener('change', selectBreed);
 
-function selectBreed(e) {
+function selectBreed(evt) {
     loader.classList.replace('is-hidden', 'loader');
     selector.classList.add('is-hidden');
     catInfo.classList.add('is-hidden');
-    breedId = e.currentTarget.value;
+    breedId = evt.currentTarget.value;
 
-    // console.log(breedId);
+    console.log(breedId);
 
     fetchCatByBreed(breedId).then(data => {
         loader.classList.replace('loader', 'is-hidden');
@@ -56,8 +56,6 @@ function selectBreed(e) {
     })
     .catch(fetchError);
 };
-
-
 
 
 function fetchError() {
