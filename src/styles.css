@@ -18,3 +18,67 @@ img {
    
 }
 
+h1 {
+    margin: 0;
+}
+
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.breed-select {
+    display: none;
+    max-width: 400px;
+    margin: auto;
+}
+
+.cat-info {
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #cdda93;
+    
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+
