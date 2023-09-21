@@ -39,13 +39,12 @@ fetchBreeds().then(data => {
 
 selector.addEventListener('change', selectBreed);
 
-function selectBreed(evt) {
+function selectBreed(e) {
     loader.classList.replace('is-hidden', 'loader');
     selector.classList.add('is-hidden');
     catInfo.classList.add('is-hidden');
-    breedId = evt.currentTarget.value;
-
-    console.log(breedId);
+    const breedId = e.currentTarget.value;
+    // console.log(breedId);
 
     fetchCatByBreed(breedId).then(data => {
         loader.classList.replace('loader', 'is-hidden');
