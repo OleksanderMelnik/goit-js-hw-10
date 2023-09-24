@@ -48,8 +48,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: #cdda93;
-    
+    background-color: #cdda93;   
 }
 
 .box-img {
@@ -61,7 +60,13 @@ h1 {
     width: 400px;
 }
 
+.loader-text {
+    font-size: 0;
+}
+    
+
 .loader {
+    font-size: 0;
     width: 48px;
     height: 48px;
     border: 5px solid #FFF;
@@ -71,6 +76,9 @@ h1 {
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     }
+    .loader::after,
+    .loader::before {
+    content: '';}
 
     @keyframes rotation {
     0% {
